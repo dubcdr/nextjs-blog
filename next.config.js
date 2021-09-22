@@ -6,7 +6,5 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   assetPrefix: isProd ? '/nextjs-blog/' : '',
-  env: {
-    BACKEND_URL: isProd ? '/nextjs-blog' : ''
-  }
+  basePath: isProd ? '/nextjs-blog': '',
 }
