@@ -29,6 +29,16 @@
   border-radius: 9999px;
 }
 
+.imgSmall {
+  height: 8rem;
+  width: 8rem;
+}
+
+.imgLarge {
+  height: 10rem;
+  width: 10rem;
+}
+
 .colorInherit {
   color: inherit;
 }

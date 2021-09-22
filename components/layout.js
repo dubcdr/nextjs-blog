@@ -1,6 +1,5 @@
 import styles from './layout.module.css'
 import Head from 'next/head'
-import Image from 'next/image'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
@@ -28,30 +27,12 @@ export default function Layout({ children, home }) {
     <header className={styles.header}>
       {home ? (
         <>
-          <Image
-            priority
-            src="/images/avatar.png"
-            className={utilStyles.borderCircle}
-            height={144}
-            width={144}
-            alt={name}
-          />
+          <img src="/images/avatar.png" className={`${utilStyles.borderCircle} ${utilStyles.imgLarge}`} />
           <h1 className={utilStyles.heading2Xl}>{name}</h1>
         </>
       ) : (
         <>
-          <Link href="/">
-            <a>
-              <Image
-                priority
-                src="/images/avatar.png"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </a>
-          </Link>
+          <img src="/images/avatar.png" className={`${utilStyles.borderCircle} ${utilStyles.imgSmall}`} />
           <h2 className={utilStyles.headingLg}>
             <Link href="/">
               <a className={utilStyles.colorInherit}>{name}</a>
